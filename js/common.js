@@ -11,6 +11,8 @@ jQuery(document).ready(function(){
   });
 });
 
+AOS.init();
+
 $('#load').on('click', function () {
       $('html, body').animate({
         scrollTop: $('.sec-2').offset().top
@@ -25,6 +27,7 @@ function headerSticky() {
       $('.navbar.fixed-top').removeClass("sticky");
     }
   };
+  
   $(window).scroll(function() {
     headerSticky();
   });
