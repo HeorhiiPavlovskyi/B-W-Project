@@ -86,14 +86,20 @@ h1 {
   font-size: 44px;
   font-weight: 400; }
 
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030; }
 .navbar {
   padding: 8px 16px;
   transition: 0.3s;
-  background: #fff; }
+  background: #fff;
+  backdrop-filter: blur(8px); }
   .navbar.sticky {
-    background: rgba(81, 92, 100, 0.85);
     padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.8); }
+    background: rgba(255, 255, 255, 0.8);  }
   @media (max-width: 991.98px) {
     .navbar {
       background: transparent; } }
@@ -101,7 +107,8 @@ h1 {
     padding: 12px 12px; }
 
 .navbar-collapse {
-  justify-content: center; }
+  justify-content: center;
+}
 
 .navbar-nav {
   align-items: center;
@@ -219,7 +226,7 @@ h1 {
     background-color: #fff; }
     @media (max-width: 991.98px) {
       .sec-2:before {
-        height: 160vh; } }
+        height: 300vh; } }
   .sec-2 .entries {
     width: calc(100% - 80px);
     max-width: 800px;
@@ -309,12 +316,12 @@ h1 {
   .sec-3:before {
     content: "";
     position: absolute;
-    bottom: -125px;
+    bottom: -140px;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background: #000;
-    transform: skewY(-5deg); }
+    transform: skewY(-4deg); }
 
 .card-deck-team {
   margin-top: 100px; }
@@ -329,7 +336,13 @@ h1 {
       color: #888888; }
 
 .faces {
-  filter: grayscale(100%); }
+  filter: grayscale(100%); 
+  max-height: 170px;
+  max-width: 170px;
+  width: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
 
 .mt-85 {
   margin-top: 85px; }
@@ -349,12 +362,12 @@ h1 {
   .sec-4:before {
     content: "";
     position: absolute;
-    bottom: -80px;
+    bottom: -140px;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background: #fff;
-    transform: skewY(-5deg);
+    transform: skewY(-4deg);
     z-index: 1000; }
 
 .services-cards {
@@ -371,6 +384,9 @@ h1 {
       .services-cards .card-deck-services .card .card-text {
         font-size: 13px;
         color: #888888; }
+  @media (max-width: 767.98px) {
+    .services-cards {
+      margin-top: 0px; } }
 
 .post-5 {
   background-image: url(../img/Post5.png);
@@ -459,7 +475,8 @@ footer {
 .form-control {
   resize: none;
   border: 1px solid #000;
-  border-radius: 0; }
+  border-radius: 0;
+  margin-bottom: 1rem;}
   .form-control:focus {
     box-shadow: 0 0 0 0.2rem transparent;
     border: 1px solid rgba(0, 0, 0, 0.5); }
